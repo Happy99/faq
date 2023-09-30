@@ -7,9 +7,11 @@ const Question = ({title, info}) => {
 
     return (
         <div className="question">
-            <h1>{title}</h1>
+            <section>
+                <h1>{title}</h1>
+                <button type="button" onClick={ () => setUkazOdpoved(!ukazOdpoved) }>Ukaz/Skryj</button>
+            </section>
             {ukazOdpoved && <p>{info}</p>}
-            <button type="button" onClick={ () => setUkazOdpoved(!ukazOdpoved) }>Ukaz/Skryj</button>
         </div>
     )
 }
