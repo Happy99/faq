@@ -10,16 +10,7 @@ const App = () => {
         <div className="questions">
             {
                 questions.map( (question, index) => {
-                    const {id, title, info} = question
-
-                    return(
-                        <Question 
-                            key={index}
-                            id={id}
-                            title={title}
-                            info={info}
-                        />
-                    )
+                    return <Question key={index} {...question} />
                 })
             }
         </div>
